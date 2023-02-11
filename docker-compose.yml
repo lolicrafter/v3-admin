@@ -1,0 +1,12 @@
+version: '1.0'
+services:
+  v3-admin:
+    container_name: v3-admin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8082:80'
